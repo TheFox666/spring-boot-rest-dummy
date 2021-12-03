@@ -3,10 +3,10 @@ package com.example.springbootrestdummy
 import org.springframework.stereotype.Service
 
 @Service
-class UserService(val helloRepository: UserRepository) {
+class UserService(val userRepository: UserRepository) {
 
     // Controller >> Service >> Repository (DB / Tabellen)
     fun getUser(id: Int): String {
-        return helloRepository.getUser(id)
+        return userRepository.getUser(id)
     }
 }

@@ -5,11 +5,11 @@ import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-class UserController(val helloService: UserService) {
+class UserController(val userService: UserService) {
 
     @GetMapping("/user/{id}")
-    fun getHelloWorld(@PathVariable("id") id: Int): String {
-        return helloService.getUser(id)
+    fun getUser(@PathVariable("id") id: Int): String {
+        return userService.getUser(id)
     }
 
 }
