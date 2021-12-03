@@ -11,5 +11,4 @@ class UserController(val userService: UserService) {
     fun getUser(@PathVariable("id") id: Int): String {
         return userService.getUser(id)
     }
-
 }
